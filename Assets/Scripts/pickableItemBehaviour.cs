@@ -29,12 +29,12 @@ public class pickableItemBehaviour : MonoBehaviour
     }
     void Update()
     {
-        /* Przy wiêkszej iloœci przedmiotów w scenie gry ci¹g³e obliczanie dystansu mo¿e byæ kosztowne dla wydajnoœci.
-           Tutaj to nie przeszkadza, bo jest to tylko jedno pomieszczenie, ale np. w domu z wieloma pokojami zrobi³bym to inaczej.
-           Poustawia³bym "strefy" za pomoc¹ colliderów ustawionych jako triggery. Dystans zacznie byæ obliczany dopiero wtedy, gry
-           gracz znajdzie siê w danym pokoju. 
-           Mo¿na by te¿ zrobiæ wtedy bez obliczania dystansu i wszystkie ikonki w³¹cz¹ siê po wejœciu do pokoju, ale to ju¿ zale¿y
-           od tego co lepiej bêdzie pasowaæ do gry. 
+        /* Przy wiÄ™kszej iloÅ›ci przedmiotÃ³w w scenie gry ciÄ…gÅ‚e obliczanie dystansu moÅ¼e byÄ‡ kosztowne dla wydajnoÅ›ci.
+           Tutaj to nie przeszkadza, bo jest to tylko jedno pomieszczenie, ale np. w domu z wieloma pokojami zrobiÅ‚bym to inaczej.
+           PoustawiaÅ‚bym "strefy" za pomocÄ… colliderÃ³w ustawionych jako triggery. Dystans zacznie byÄ‡ obliczany dopiero wtedy, gry
+           gracz znajdzie siÄ™ w danym pokoju. 
+           MoÅ¼na by teÅ¼ zrobiÄ‡ wtedy bez obliczania dystansu i wszystkie ikonki wÅ‚Ä…czÄ… siÄ™ po wejÅ›ciu do pokoju, ale to juÅ¼ zaleÅ¼y
+           od tego co lepiej bÄ™dzie pasowaÃ¦ do gry. 
         */
         if (itemMode == mode.normal)
         {
@@ -43,18 +43,18 @@ public class pickableItemBehaviour : MonoBehaviour
             if (distance <= 8 && !isOn)
             {
                 inspectIcon.SetActive(true);
-                isOn = true; // Ma³e zabezpieczenie, ¿eby ikona nie w³¹cza³a siê w ka¿dej klatce mimo tego, ¿e jest ju¿ w³¹czona
+                isOn = true; // MaÅ‚e zabezpieczenie, Å¼eby ikona nie wÅ‚Ä…czaÅ‚a siÄ™ w kaÅ¼dej klatce mimo tego, Å¼e jest juÅ¼ wÅ‚Ä…czona
             }
             else if (distance > 8 && isOn)
             {
                 inspectIcon.SetActive(false);
-                isOn = false; // to samo co wy¿ej, tylko na odwrót
+                isOn = false; // to samo co wyÅ¼ej, tylko na odwrÃ³t
             }
 
-            // Ci¹g³e obracanie siê ikony w stronê gracza
+            // CiÄ…gÅ‚e obracanie siÄ™ ikony w stronÄ™ gracza
             inspectIcon.transform.LookAt(player);
         }
-        else // Obracanie za pomoc¹ wsad lub strza³ek.
+        else // Obracanie za pomocÄ… wsad lub strzaÅ‚ek.
         {
             float horizontal = Input.GetAxis("Horizontal"); 
             float vertical = Input.GetAxis("Vertical");
@@ -72,7 +72,7 @@ public class pickableItemBehaviour : MonoBehaviour
         itemMode = mode.inspect;
         mouseButtonHint.SetActive(false);
     }
-    public void resetItem() // powrót na poprzednie miejsce
+    public void resetItem() // powrÃ³t na poprzednie miejsce
     {
         transform.parent = null;
         transform.position = startPosition;

@@ -14,7 +14,7 @@ public class playerInput : MonoBehaviour
     GameObject currentItem;
     void Update()
     {
-        // Wy³¹czanie inspekcji przedmiotu
+        // WyÅ‚Ä…czanie inspekcji przedmiotu
         if (Input.GetKeyDown(KeyCode.Tab) && itemInspectionOpen)
         {
             raycastSystem.itemInspect(true);
@@ -31,7 +31,7 @@ public class playerInput : MonoBehaviour
             itemEquip(thermal);
         }
 
-        // EMf
+        // EMF
 
         if (Input.GetKeyDown(KeyCode.Alpha2) && !itemInspectionOpen)
         {
@@ -54,7 +54,7 @@ public class playerInput : MonoBehaviour
     }
     void itemEquip(GameObject item)
     {
-        if (currentItem != null) // sprawdzenie czy gracz w ogóle ma coœ w rêce
+        if (currentItem != null) // sprawdzenie czy gracz w ogÃ³le ma coÅ“ w rÄ™ce
         {
             currentItem.SetActive(false);
             currentItem = null;

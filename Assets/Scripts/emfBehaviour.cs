@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class emfBehaviour : MonoBehaviour
 {
-    [SerializeField] GameObject currentEntity; // W wiêkszej grze mo¿e byæ ich wiêcej, dlatego ta pozycja by³aby dynamiczna
-    [SerializeField] GameObject[] lights; // 5 œwiate³ - 5 poziomów
+    [SerializeField] GameObject currentEntity; // W wiÄ™kszej grze moÅ¼e byÄ‡ ich wiÄ™cej, dlatego ta pozycja byÅ‚aby dynamiczna
+    [SerializeField] GameObject[] lights; // 5 Å›wiateÅ‚ - 5 poziomÃ³w 
     float distance;
     void Update()
     {
         distance = Vector3.Distance(transform.position, currentEntity.transform.position);
 
-        // Wygl¹da to brzydko z tymi ifami, no ale sposobu lepszego nie ma (albo ja go nie odkry³em)
-        // Te odleg³oœci s¹ oczywiœcie wpisane bez wiêkszego zastanowienia. To wszystko zale¿y co bêdzie pasowaæ do gry
+        // WyglÄ…da to brzydko z tymi ifami, no ale sposobu lepszego nie ma (albo ja go nie odkryÅ‚em)
+        // Te odlegÅ‚oÅ›ci sÄ… oczywiÅ›cie wpisane bez wiÄ™kszego zastanowienia. To wszystko zaleÅ¼y co bÄ™dzie pasowaÄ‡ do gry
         if (distance > 25)
         {
             lightsMethod(0);
@@ -38,12 +38,12 @@ public class emfBehaviour : MonoBehaviour
     }
     void lightsMethod(int amount)
     {
-        // najpierw musimy wy³¹czyæ wszystkie œwiat³a 
+        // najpierw musimy wyÅ‚Ä…czyÄ‡ wszystkie Å›wiatÅ‚a 
         for (int i = 0; i < lights.Length; i++)
         {
             lights[i].SetActive(false);
         }
-        // dopiero teraz w³¹czamy odpowiedni¹ iloœæ
+        // dopiero teraz wÅ‚Ä…czamy odpowiedniÄ… iloÅ›Ä‡
         for (int i = 0; i < amount; i++)
         {
             lights[i].SetActive(true);

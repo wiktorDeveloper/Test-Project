@@ -9,7 +9,7 @@ public class movement : MonoBehaviour
 
     void Update()
     {
-        // Prosty skrypt na poruszanie siê. Nic zaawansowanego
+        // Prosty skrypt na poruszanie siÄ™. Nic zaawansowanego
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");

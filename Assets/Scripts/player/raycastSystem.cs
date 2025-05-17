@@ -31,7 +31,7 @@ public class raycastSystem : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(camObj.position, camObj.forward, out hit, range))
         {
-            // œwiat³o
+            // Å›wiatÅ‚o
             if (hit.transform.gameObject.GetComponent<lightSwitch>() != null)
             {
                 hit.transform.gameObject.GetComponent<lightSwitch>().lightTrigger();
@@ -46,11 +46,11 @@ public class raycastSystem : MonoBehaviour
                 playerInput.itemInspectionOpen = true;
                 playerInput.currentItemInInspection = hit.transform.gameObject;
                 hit.transform.gameObject.GetComponent<pickableItemBehaviour>().inspect();
-                itemNameText.text = hit.transform.gameObject.GetComponent<pickableItemBehaviour>().itemName; // pobieramy nazwê przedmiotu by j¹ wypisaæ
-                // ¿eby przedmiot by³ pokazywany przed canvasem trzeba odpaliæ drug¹ kamerê, ¿eby najpierw rysowa³o siê œciemnione t³o, a dopiero póŸniej item
+                itemNameText.text = hit.transform.gameObject.GetComponent<pickableItemBehaviour>().itemName; // pobieramy nazwÄ™ przedmiotu by jÄ… wypisaÄ‡
+                // Å¼eby przedmiot byÅ‚ pokazywany przed canvasem, trzeba odpaliÄ‡ drugÄ… kamerÄ™, aby najpierw rysowaÅ‚o siÄ™ Å›ciemnione tÅ‚o, a dopiero pÃ³Åºniej item
                 canvas.worldCamera = uiCam; 
-                canvas.planeDistance = 2; // trzeba to ustawienie zmieniæ, ¿eby UI by³o w odpowiednim miejscu
-                playerInput.hideItem(); // chowamy przedmiot jeœli jakiœ trzymamy. Bez sensu ¿eby by³ na ekranie podczas inspekcji
+                canvas.planeDistance = 2; // trzeba to ustawienie zmieniÄ‡, Å¼eby UI byÅ‚o w odpowiednim miejscu
+                playerInput.hideItem(); // chowamy przedmiot jeÅ¼eli jakiÅ› trzymamy. Bez sensu Å¼eby byÅ‚ na ekranie podczas inspekcji
             }
         }
     }
