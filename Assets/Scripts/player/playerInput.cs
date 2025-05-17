@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class playerInput : MonoBehaviour
 {
     GameObject eqPanel;
@@ -43,6 +43,13 @@ public class playerInput : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             hideItem();
+        }
+
+        // Wy³¹czanie gry
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
     }
     void itemEquip(GameObject item)
