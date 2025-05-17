@@ -13,7 +13,7 @@ public class pickableItemBehaviour : MonoBehaviour
     bool isOn;
     mode itemMode;
 
-    public GameObject mouseButtonHint;
+    [SerializeField] GameObject mouseButtonHint;
     float rotationSpeed = 90f;
 
     public string itemName;

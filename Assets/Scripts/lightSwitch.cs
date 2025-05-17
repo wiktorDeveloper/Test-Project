@@ -9,7 +9,7 @@ public class lightSwitch : MonoBehaviour
     bool isInspectIconOn;
     [SerializeField] bool isLightOn;
     float distance; 
-    public GameObject mouseButtonHint;
+    [SerializeField] GameObject mouseButtonHint;
     void Update()
     {
         distance = Vector3.Distance(transform.position, player.position);

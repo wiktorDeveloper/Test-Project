@@ -5,12 +5,12 @@ public class playerInput : MonoBehaviour
     GameObject eqPanel;
 
     [HideInInspector] public bool itemInspectionOpen;
-    public raycastSystem raycastSystem;
 
     [SerializeField] GameObject thermal;
     [SerializeField] GameObject emfDetector;
-    public GameObject currentItemInInspection;
 
+    public raycastSystem raycastSystem;
+    public GameObject currentItemInInspection;
     GameObject currentItem;
     void Update()
     {
