@@ -45,7 +45,7 @@ public class playerInput : MonoBehaviour
             hideItem();
         }
 
-        // Wy��czanie gry
+        // Wyłączanie gry
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -54,7 +54,7 @@ public class playerInput : MonoBehaviour
     }
     void itemEquip(GameObject item)
     {
-        if (currentItem != null) // sprawdzenie czy gracz w ogóle ma coœ w ręce
+        if (currentItem != null) // sprawdzenie czy gracz w ogóle ma coś w ręcę
         {
             currentItem.SetActive(false);
             currentItem = null;
