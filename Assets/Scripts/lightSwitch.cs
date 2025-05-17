@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class lightSwitch : MonoBehaviour
 {
-    [SerializeField] GameObject[] lightObj; // tablica bo czêsto mo¿e byæ tak, ¿e jeden w³¹cznik obs³uguje wiêcej ni¿ jedno Ÿród³o œwiat³a
+    [SerializeField] GameObject[] lightObj; // tablica bo czÃªsto moÂ¿e byÃ¦ tak, Â¿e jeden wÂ³Â¹cznik obsÂ³uguje wiÃªcej niÂ¿ jedno Å¸rÃ³dÂ³o Å“wiatÂ³a
     [SerializeField] Transform player; 
-    [SerializeField] GameObject inspectIcon;
+    [SerializeField] GameObject inspectIcon; 
     bool isInspectIconOn;
     [SerializeField] bool isLightOn;
     float distance; 
@@ -22,7 +22,7 @@ public class lightSwitch : MonoBehaviour
         else if (distance > 8 && isInspectIconOn)
         {
             inspectIcon.SetActive(false);
-            isInspectIconOn = false; // to samo co wy¿ej, tylko na odwrót
+            isInspectIconOn = false; // to samo co wyÂ¿ej, tylko na odwrÃ³t
         }
     }
     private void OnMouseOver() 
@@ -41,7 +41,7 @@ public class lightSwitch : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !isLightOn)
         {
-            for (int i = 0; i < lightObj.Length; i++) // zwyk³a pêtla for, która obs³uguje wszystkie œwiat³a w tablicy
+            for (int i = 0; i < lightObj.Length; i++) // zwykÂ³a pÃªtla for, ktÃ³ra obsÂ³uguje wszystkie Å“wiatÂ³a w tablicy
             {
                 lightObj[i].SetActive(true);
             }
